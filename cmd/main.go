@@ -3,8 +3,9 @@ package main
 import (
 	"log"
 	"net/http"
-	"ott-content-api/config"
-	"ott-content-api/controllers"
+
+	"github.com/sergioglesio/ott-content-api/config"
+	"github.com/sergioglesio/ott-content-api/controllers"
 
 	"github.com/gorilla/mux"
 )
