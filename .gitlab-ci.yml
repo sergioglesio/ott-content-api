@@ -1,0 +1,23 @@
+stages:
+  - build
+  - test
+  - deploy
+
+build:
+  stage: build
+  script:
+    - docker build -t ott-content-api:latest .
+
+test:
+  stage: test
+  script:
+    - go test ./...
+
+deploy:
+  stage: deploy
+  environment:
+    name: production
+    url: http://your-google-cloud-url
+  script:
+    - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
+    - docker push ott-content-api:latest
