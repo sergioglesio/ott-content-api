@@ -55,7 +55,7 @@ ott-content-api/
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu_usuario/ott-content-api.git
+   git clone https://github.com/sergioglesio/ott-content-api.git
    cd ott-content-api
    ```
 
